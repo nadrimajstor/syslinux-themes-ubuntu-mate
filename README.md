@@ -89,7 +89,7 @@ stdmenu.cfg:
 wget https://raw.githubusercontent.com/nadrimajstor/syslinux-themes-ubuntu-mate/master/ubuntu-mate-syslinux-splash.png -O splash.png
 ```
 
-txt.cfg
+txt.cfg:
 * /casper/vmlinuz `do not go to isolinux directory - ignoring for now`
 * /cdrom/preseed/ubuntu.seed `do not go to isolinux directory - ignoring for now`
 * /casper/initrd.lz `do not go to isolinux directory - ignoring for now`
@@ -97,4 +97,31 @@ txt.cfg
 * localboot 0x80
 ``` bash
 cp /usr/lib/syslinux/chain.c32 .
+```
+
+prompt.cfg:
+* f1.txt
+* f2.txt
+* f3.txt
+* f4.txt
+* f5.txt
+* f6.txt
+* f7.txt
+* f8.txt
+* f9.txt
+* f10.txt
+``` bash
+cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/f{1..10}.txt .
+```
+* exithelp.cfg
+``` bash
+cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/exithelp.cfg .
+```
+
+***
+
+``` bash
+wget https://raw.githubusercontent.com/nadrimajstor/syslinux-themes-ubuntu-mate/master/ubuntu-mate-syslinux-splash.pcx -O splash.pcx
+wget https://raw.githubusercontent.com/nadrimajstor/syslinux-themes-ubuntu-mate/master/ubuntu-mate-syslinux-gfxboot.cfg -O gfxboot.cfg
+wget https://raw.githubusercontent.com/nadrimajstor/syslinux-themes-ubuntu-mate/master/ubuntu-mate-syslinux-blank.pcx -O blank.pcx
 ```
