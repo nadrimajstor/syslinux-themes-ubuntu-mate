@@ -1,5 +1,3 @@
-syslinux-themes-ubuntu-mate
-===========================
 TL;DR
 ``` bash
 cd isolinux #or wherever your files for ISO might be
