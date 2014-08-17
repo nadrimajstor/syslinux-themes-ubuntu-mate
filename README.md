@@ -7,6 +7,7 @@ wget $BASE_URL/ubuntu-mate-syslinux-splash.png -O splash.png
 wget $BASE_URL/ubuntu-mate-syslinux-splash.pcx -O splash.pcx
 wget $BASE_URL/ubuntu-mate-syslinux-blank.pcx -O blank.pcx
 wget $BASE_URL/ubuntu-mate-syslinux-access.pcx -O access.pcx
+gfxboot -a bootlogo --add-file gfxboot.cfg splash.png splash.pcx blank.pcx access.pcx
 ```
 ***
 
