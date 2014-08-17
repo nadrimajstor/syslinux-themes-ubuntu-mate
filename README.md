@@ -124,4 +124,5 @@ cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/exithelp.cfg .
 wget https://raw.githubusercontent.com/nadrimajstor/syslinux-themes-ubuntu-mate/master/ubuntu-mate-syslinux-splash.pcx -O splash.pcx
 wget https://raw.githubusercontent.com/nadrimajstor/syslinux-themes-ubuntu-mate/master/ubuntu-mate-syslinux-gfxboot.cfg -O gfxboot.cfg
 wget https://raw.githubusercontent.com/nadrimajstor/syslinux-themes-ubuntu-mate/master/ubuntu-mate-syslinux-blank.pcx -O blank.pcx
+wget https://raw.githubusercontent.com/nadrimajstor/syslinux-themes-ubuntu-mate/master/ubuntu-mate-syslinux-access.pcx -O access.pcx
 ```
