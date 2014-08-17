@@ -85,6 +85,9 @@ cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/prompt.cfg .
 
 stdmenu.cfg:
 * splash.png
+``` bash
+wget https://raw.githubusercontent.com/nadrimajstor/syslinux-themes-ubuntu-mate/master/ubuntu-mate-syslinux-splash.png -O splash.png
+```
 
 txt.cfg
 * /casper/vmlinuz `do not go to isolinux directory - ignoring for now`
