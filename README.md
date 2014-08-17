@@ -66,13 +66,16 @@ cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/txt.cfg .
 ```
 * gtk.cfg
 ``` bash
-Dose not exist / don't have a clue reagarding its purpose
+# Can't find it anywhere / don't have a clue reagarding its purpose
+```
 * adtxt.cfg
 ``` bash
 cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/adtxt.cfg .
 ```
 * adgtk.cfg
-Dose not exist / don't have a clue reagarding its purpose
+``` bash
+# Can't find it anywhere / don't have a clue reagarding its purpose
+```
 * prompt.cfg
 ``` bash
 cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/prompt.cfg .
