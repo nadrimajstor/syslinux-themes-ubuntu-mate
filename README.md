@@ -47,3 +47,33 @@ tar -xf /tmp/gfxboot-theme-ubuntu/install/bootlogo.tar.gz
 
 ***
 
+So it works... Ok then lets check on dependancyes.
+
+`isolinux.cfg`:
+* `default vesamenu.c32`
+``` bash
+cp /usr/lib/syslinux/vesamenu.c32 .
+```
+
+In `menu.cfg` we asked for:
+* stdmenu.cfg
+``` bash
+cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/stdmenu.cfg .
+```
+* txt.cfg
+``` bash
+cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/txt.cfg .
+```
+* gtk.cfg
+``` bash
+Dose not exist / don't have a clue reagarding its purpose
+* adtxt.cfg
+``` bash
+cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/adtxt.cfg .
+```
+* adgtk.cfg
+Dose not exist / don't have a clue reagarding its purpose
+* prompt.cfg
+``` bash
+cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/prompt.cfg .
+```
