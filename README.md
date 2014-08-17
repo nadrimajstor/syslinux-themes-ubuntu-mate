@@ -83,3 +83,15 @@ cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/prompt.cfg .
 ![](docs/blue_background_with_menu.png)
 ***
 
+stdmenu.cfg:
+* splash.png
+
+txt.cfg
+* /casper/vmlinuz `do not go to isolinux directory - ignoring for now`
+* /cdrom/preseed/ubuntu.seed `do not go to isolinux directory - ignoring for now`
+* /casper/initrd.lz `do not go to isolinux directory - ignoring for now`
+* /install/mt86plus `do not go to isolinux directory - ignoring for now`
+* localboot 0x80
+``` bash
+cp /usr/lib/syslinux/chain.c32 .
+```
