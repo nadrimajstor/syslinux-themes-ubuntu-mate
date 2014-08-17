@@ -80,3 +80,6 @@ cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/adtxt.cfg .
 ``` bash
 cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/prompt.cfg .
 ```
+![](docs/blue_background_with_menu.png)
+***
+
