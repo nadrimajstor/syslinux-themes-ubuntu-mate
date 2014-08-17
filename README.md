@@ -10,6 +10,9 @@ wget $BASE_URL/ubuntu-mate-syslinux-access.pcx -O access.pcx
 gfxboot -a bootlogo --add-file gfxboot.cfg splash.png splash.pcx blank.pcx access.pcx
 # Rebuild ISO
 ```
+![final](docs/final.png)
+
+***
 ***
 
 
