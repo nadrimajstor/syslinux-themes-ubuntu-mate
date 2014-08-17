@@ -1,5 +1,19 @@
 syslinux-themes-ubuntu-mate
 ===========================
+TL;DR
+``` bash
+cd isolinux #or wherever your files for ISO might be
+BASE_URL=https://raw.githubusercontent.com/nadrimajstor/syslinux-themes-ubuntu-mate/master
+wget $BASE_URL/ubuntu-mate-syslinux-gfxboot.cfg -O gfxboot.cfg
+wget $BASE_URL/ubuntu-mate-syslinux-splash.png -O splash.png
+wget $BASE_URL/ubuntu-mate-syslinux-splash.pcx -O splash.pcx
+wget $BASE_URL/ubuntu-mate-syslinux-blank.pcx -O blank.pcx
+wget $BASE_URL/ubuntu-mate-syslinux-access.pcx -O access.pcx
+
+```
+***
+
+
 All the steps documented 'cos we gonna redo some for live-image-mate-desktop.
 
 Destination paths are relative 'cos I'm standing in the isolinux directory.
