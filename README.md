@@ -34,7 +34,7 @@ Now its left just to add icing on the cake... Small patch to the `gfxboot-theme-
 
 ```
 And we have a :cake:
-![final](docs/final.png)
+![final](docs/final2.png)
 ***
 
 
