@@ -1,5 +1,5 @@
 TL;DR
-``` bash
+```bash
 cd isolinux #or wherever your files for ISO might be
 BASE_URL=https://raw.githubusercontent.com/nadrimajstor/syslinux-themes-ubuntu-mate/master
 wget $BASE_URL/ubuntu-mate-syslinux-gfxboot.cfg -O gfxboot.cfg
@@ -13,6 +13,28 @@ gfxboot -a bootlogo --add-file gfxboot.cfg splash.png splash.pcx blank.pcx acces
 ![final](docs/final.png)
 
 ***
+Now its left just to add icing on the cake small patch to the gfxboot-theme-ubuntu package:
+```diff
+=== modified file 'common.inc'
+--- old/common.inc	2011-03-28 18:46:25 +0000
++++ new/common.inc	2014-08-19 20:56:04 +0000
+@@ -1355,9 +1355,9 @@
+ 
+ /transp 0 def
+ 
+-640 480 16 findmode setmode not {
+-  640 480 32 findmode setmode not {
+-    640 400 4 findmode setmode not {
++640 480 32 findmode setmode not {
++  640 480 24 findmode setmode not {
++    640 400 16 findmode setmode not {
+       false .end
+     } if
+   } if
+
+
+```
+![final](docs/final.png)
 ***
 
 
@@ -20,7 +42,7 @@ All the steps documented 'cos we gonna redo some for live-image-mate-desktop.
 
 Destination paths are relative 'cos I'm standing in the isolinux directory.
 
-``` bash
+```bash
 cp /usr/lib/syslinux/isolinux-debug.bin isolinux.bin
 #or
 cp /usr/lib/syslinux/isolinux.bin isolinux.bin #for production
@@ -30,7 +52,7 @@ cp /usr/lib/syslinux/isolinux.bin isolinux.bin #for production
 ***
 
 
-``` bash
+```bash
 cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/isolinux.cfg .
 ```
 ![](docs/could_not_find_kernel_image_gfxboot.png)
@@ -38,7 +60,7 @@ cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/isolinux.cfg .
 ***
 
 
-``` bash
+```bash
 cp /usr/lib/syslinux/gfxboot.c32 .
 ```
 ![](docs/no_label_keywords_found.png)
@@ -46,7 +68,7 @@ cp /usr/lib/syslinux/gfxboot.c32 .
 ***
 
 
-``` bash
+```bash
 cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/menu.cfg .
 ```
 ![](docs/error_setting_up_gfxboot.png)
@@ -54,7 +76,7 @@ cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/menu.cfg .
 ***
 
 
-``` bash
+```bash
 tar -xf /tmp/gfxboot-theme-ubuntu/install/bootlogo.tar.gz
 ```
 * This should come from `gfxboot-theme-ubuntu: /usr/share/gfxboot-theme-ubuntu/bootlogo.tar.gz` but at the moment there is some bugchaseing and I built it from source.
@@ -67,33 +89,33 @@ So it works... Ok then lets check on dependancyes.
 
 `isolinux.cfg`:
 * `default vesamenu.c32`
-``` bash
+```bash
 cp /usr/lib/syslinux/vesamenu.c32 .
 ```
 
 In `menu.cfg` we asked for:
 * stdmenu.cfg
-``` bash
+```bash
 cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/stdmenu.cfg .
 ```
 * txt.cfg
-``` bash
+```bash
 cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/txt.cfg .
 ```
 * gtk.cfg
-``` bash
+```bash
 # Can't find it anywhere / don't have a clue reagarding its purpose
 ```
 * adtxt.cfg
-``` bash
+```bash
 cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/adtxt.cfg .
 ```
 * adgtk.cfg
-``` bash
+```bash
 # Can't find it anywhere / don't have a clue reagarding its purpose
 ```
 * prompt.cfg
-``` bash
+```bash
 cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/prompt.cfg .
 ```
 ![](docs/blue_background_with_menu.png)
@@ -101,7 +123,7 @@ cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/prompt.cfg .
 
 stdmenu.cfg:
 * splash.png
-``` bash
+```bash
 wget https://raw.githubusercontent.com/nadrimajstor/syslinux-themes-ubuntu-mate/master/ubuntu-mate-syslinux-splash.png -O splash.png
 ```
 
@@ -111,7 +133,7 @@ txt.cfg:
 * /casper/initrd.lz `do not go to isolinux directory - ignoring for now`
 * /install/mt86plus `do not go to isolinux directory - ignoring for now`
 * localboot 0x80
-``` bash
+```bash
 cp /usr/lib/syslinux/chain.c32 .
 ```
 
@@ -126,17 +148,17 @@ prompt.cfg:
 * f8.txt
 * f9.txt
 * f10.txt
-``` bash
+```bash
 cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/f{1..10}.txt .
 ```
 * exithelp.cfg
-``` bash
+```bash
 cp /usr/share/syslinux/themes/ubuntu-trusty/isolinux-live/exithelp.cfg .
 ```
 
 ***
 
-``` bash
+```bash
 wget https://raw.githubusercontent.com/nadrimajstor/syslinux-themes-ubuntu-mate/master/ubuntu-mate-syslinux-splash.pcx -O splash.pcx
 wget https://raw.githubusercontent.com/nadrimajstor/syslinux-themes-ubuntu-mate/master/ubuntu-mate-syslinux-gfxboot.cfg -O gfxboot.cfg
 wget https://raw.githubusercontent.com/nadrimajstor/syslinux-themes-ubuntu-mate/master/ubuntu-mate-syslinux-blank.pcx -O blank.pcx
