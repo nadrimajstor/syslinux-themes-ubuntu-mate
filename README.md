@@ -13,6 +13,7 @@ gfxboot -a bootlogo --add-file gfxboot.cfg splash.png splash.pcx blank.pcx acces
 ![final](docs/final.png)
 
 ***
+
 Now its left just to add icing on the cake... Small patch to the `gfxboot-theme-ubuntu` package to have a correct order of color depths (we want to make a new `init` file for our `bootlogo`)
 ```diff
 === modified file 'common.inc'
@@ -34,7 +35,9 @@ Now its left just to add icing on the cake... Small patch to the `gfxboot-theme-
 
 ```
 And we have a :cake:
+
 ![final](docs/final2.png)
+
 ***
 
 
