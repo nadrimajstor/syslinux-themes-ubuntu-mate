@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.48.4 r9939"
    sodipodi:docname="ubuntu-mate-syslinux-splash.svg"
-   inkscape:export-filename="/home/ivan/Documents/ubuntu-mate/ubuntu-mate-syslinux-splash.png"
+   inkscape:export-filename="/home/ivan/Documents/ubuntu-mate/syslinux-themes-ubuntu-mate/ubuntu-mate-syslinux-splash.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -2973,18 +2973,6 @@
     </filter>
     <filter
        inkscape:collect="always"
-       id="filter27437"
-       x="-0.016935484"
-       width="1.033871"
-       y="-0.13124998"
-       height="1.2625">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="1.3473971"
-         id="feGaussianBlur27439" />
-    </filter>
-    <filter
-       inkscape:collect="always"
        id="filter27487"
        x="-0.013548387"
        width="1.0270968"
@@ -3007,7 +2995,7 @@
      inkscape:cx="320"
      inkscape:cy="240"
      inkscape:document-units="px"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer2"
      showgrid="false"
      showborder="false"
      showguides="true"
@@ -3030,26 +3018,12 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="orig"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,-572.36218)"
-     sodipodi:insensitive="true">
-    <image
-       y="572.36218"
-       x="0"
-       id="image3047"
-       xlink:href="file:///home/ivan/Documents/ubuntu-mate/ubuntu-mate-iso/_config/includes.binary.amd64/isolinux/splash.pcx"
-       height="480"
-       width="640" />
-  </g>
-  <g
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Background"
      sodipodi:insensitive="true">
     <rect
-       style="fill:#3d3a38;fill-opacity:1;stroke:none"
+       style="fill:#3c3b37;fill-opacity:1;stroke:none"
        id="rect3050"
        width="640"
        height="480"
@@ -3066,7 +3040,7 @@
        y="0"
        xlink:href="#g27280"
        id="use27298"
-       style="opacity:0.84999999999999998;filter:url(#filter27487)"
+       style="opacity:0.85;filter:url(#filter27487)"
        width="640"
        height="480" />
     <g
